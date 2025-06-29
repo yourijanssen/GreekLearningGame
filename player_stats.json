@@ -1,0 +1,28 @@
+{
+  "playtime_seconds": 659,
+  "games_played": {
+    "letters": 2,
+    "combinations": 0,
+    "words": 2,
+    "sentences": 1,
+    "numbers": 2,
+    "fill_blanks": 0
+  },
+  "correct_answers": {
+    "letters": 65,
+    "combinations": 0,
+    "words": 15,
+    "sentences": 1,
+    "numbers": 7,
+    "fill_blanks": 0
+  },
+  "best_streak": {
+    "letters": 41,
+    "combinations": 0,
+    "words": 9,
+    "sentences": 1,
+    "numbers": 4,
+    "fill_blanks": 0
+  },
+  "last_played": 1751156339
+}
