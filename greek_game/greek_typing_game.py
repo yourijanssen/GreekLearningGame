@@ -1,28 +1,8 @@
 import random
 import unicodedata
 from player_stats import load_player_stats, save_player_stats, update_mode_stats
+from ui_helpers import green, red, yellow, blue, magenta, cyan, bold, congrats_streak
 import time
-import sys
-
-# Terminal color codes (optional, works in many terminals)
-def color(text, code):
-    return f"\033[{code}m{text}\033[0m" if sys.stdout.isatty() else text
-
-def green(text): return color(text, '92')
-def red(text):   return color(text, '91')
-def yellow(text): return color(text, '93')
-def blue(text): return color(text, '94')
-def magenta(text): return color(text, '95')
-def bold(text):  return color(text, '1')
-
-# Fun message function for big streaks
-def congrats_streak(streak):
-    if streak >= 20: 
-        print(bold(green(f"🌟 WOW! {streak} answers in a row! You're a legend! 🌟\n")))
-    elif streak >= 10: 
-        print(yellow(f"🔥 {streak} correct in a row! Keep going! 🔥\n"))
-    elif streak >= 5: 
-        print(blue(f"👏 {streak} correct answers streak! 👏\n"))
 
 greek_letters = [
     ('α', 'alpha / άλφα (alfa)'),
@@ -49,6 +29,7 @@ greek_letters = [
     ('Λ', 'LAMBDA / ΛΆΜΔΑ (LAMDA)'),
     ('μ', 'mu / μι (mi)'),
     ('Μ', 'MU / ΜΙ (MI)'),
+    
     ('ν', 'nu / νι (ni)'),
     ('Ν', 'NU / ΝΙ (NI)'),
     ('ξ', 'xi / ξι (ksi)'),
@@ -697,13 +678,6 @@ def play_fill_blanks():
 def show_stats(stats):
     import datetime
 
-    # Color helpers (same as elsewhere)
-    def green(t):   return f"\033[92m{t}\033[0m"
-    def cyan(t):    return f"\033[96m{t}\033[0m"
-    def magenta(t): return f"\033[95m{t}\033[0m"
-    def yellow(t):  return f"\033[93m{t}\033[0m"
-    def bold(t):    return f"\033[1m{t}\033[0m"
-
     def minutes_seconds(secs):
         mins = int(secs) // 60
         s = int(secs) % 60
@@ -742,12 +716,6 @@ def show_stats(stats):
             dt = lp
         print(f"\n⌛ Last played: {bold(str(dt))}")
     print(magenta("="*36)+"\n")
-
-# Main Menu loop
-def cyan(t): return f"\033[96m{t}\033[0m"
-def yellow(t): return f"\033[93m{t}\033[0m"
-def bold(t): return f"\033[1m{t}\033[0m"
-def magenta(t): return f"\033[95m{t}\033[0m"
 
 def print_menu_header():
     print(magenta("\n" + "=" * 40))

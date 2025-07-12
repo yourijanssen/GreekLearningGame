@@ -1,0 +1,67 @@
+:root {
+  --greek-blue: #2166ac;
+  --greek-light: #f5f9fb;
+  --greek-accent: #e3e6eb;
+  --greek-border: #396096;
+}
+
+.greek-background {
+  background: var(--greek-light);
+  min-height: 100vh;
+}
+
+.greek-main-container {
+  margin: 0 auto;
+  max-width: 650px;
+  padding: 2.5rem 1.25rem 2rem 1.25rem;
+  background: #fff;
+  box-shadow: 0 4px 24px 0 rgba(33,102,172,0.09);
+  border-radius: 16px;
+  border: 3.5px solid var(--greek-accent);
+  border-bottom: 8px solid var(--greek-blue); /* gives a column vibe */
+  position: relative;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+h1, h2, h3 {
+  color: var(--greek-blue);
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+a {
+  color: var(--greek-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+footer {
+  border-top: 2px solid var(--greek-accent);
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #68739d;
+  padding-top: 1rem;
+  font-family: var(--font-geist-mono), monospace;
+}
+
+input, button {
+  border-radius: 8px;
+  border: 1.75px solid var(--greek-border);
+  font-size: 1.08rem;
+  padding: 0.4rem 0.8rem;
+  outline: none;
+}
+
+button {
+  background: var(--greek-blue);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background 0.13s;
+}
+
+button:hover, button:focus {
+  background: #274883;
+}
